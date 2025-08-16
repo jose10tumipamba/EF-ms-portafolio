@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./microservicioBACK
+    container_name: backend_fastapi
+    ports:
+      - "8000:8000"
+    networks:
+      - appnet
+
+  frontend:
+    build: ./Plantilla-Front
+    container_name: frontend_nginx
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    networks:
+      - appnet
+
+networks:
+  appnet:
+    driver: bridge

@@ -1,15 +1,34 @@
-# Proyecto examen final
 
-Estudiante: José Tumipamba
+# Proyecto Examen Final
 
+**Estudiante:** José Tumipamba  
 
-Cada Proyecto tiene su archivo readme para mas informacion revise individualmente.
+---
 
-Para ejecutar los proyectos en Docker
+Construir las imágenes:
 
 ```bash
 docker-compose build
 ```
 
-De esta forma podemos construir correctamente el proyecto.
+Levantar los contenedores:
 
+```bash
+docker-compose up -d
+```
+
+---
+
+## 🌐 Acceso a los servicios
+
+- **Frontend:** http://localhost:8080
+- **Backend (API):** http://localhost:8000
+- **Documentación API (Swagger):** http://localhost:8000/docs
+
+---
+
+Para detener los servicios:
+
+```bash
+docker-compose down
+```
